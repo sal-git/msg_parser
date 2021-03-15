@@ -368,6 +368,9 @@ class MsOxMessage(object):
     def get_email_mime_content(self):
         email_obj = EmailFormatter(self)
         return email_obj.build_email()
+    
+    def get_email_file(self):
+        return EmailFormatter(self)
 
     def save_email_file(self, file_path, file_name=None):
         email_obj = EmailFormatter(self)
